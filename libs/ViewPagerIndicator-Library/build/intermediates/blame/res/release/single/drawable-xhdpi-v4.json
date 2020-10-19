@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\App\\Car_Manager_working\\libs\\ViewPagerIndicator-Library\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_normal.9.png",
+        "source": "D:\\New folder (2)\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\4fcf7303ffb952a1140d91b71a48f558\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\App\\Car_Manager_working\\libs\\ViewPagerIndicator-Library\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "D:\\New folder (2)\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\4fcf7303ffb952a1140d91b71a48f558\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\App\\Car_Manager_working\\libs\\ViewPagerIndicator-Library\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "D:\\New folder (2)\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\4fcf7303ffb952a1140d91b71a48f558\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "E:\\App\\Car_Manager_working\\libs\\ViewPagerIndicator-Library\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "D:\\New folder (2)\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\4fcf7303ffb952a1140d91b71a48f558\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\App\\Car_Manager_working\\libs\\ViewPagerIndicator-Library\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "D:\\New folder (2)\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\4fcf7303ffb952a1140d91b71a48f558\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+    }
+]

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "667077342230",
+    "firebase_url": "https://autismfriendlyworld-b2181.firebaseio.com",
+    "project_id": "autismfriendlyworld-b2181",
+    "storage_bucket": "autismfriendlyworld-b2181.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667077342230:android:65935fb71619038949f137",
+        "android_client_info": {
+          "package_name": "com.AutismFriendlyWorld.tcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667077342230-chl07vgqjmgntosto6bb352931u8n6ph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.AutismFriendlyWorld.tcc",
+            "certificate_hash": "c54e650d32572f960903e67b841277c108a40ebb"
+          }
+        },
+        {
+          "client_id": "667077342230-jomm9nj4uvjjmbl7d7gemcdhol2l13r8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaX5idPXREVFH1qEu1-wNVxA8n3ZGxgbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667077342230-jomm9nj4uvjjmbl7d7gemcdhol2l13r8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragment.Places.MapsFragment" />
+
+    <LinearLayout
+        android:id="@+id/dropdown_menu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_corner_white_dropdownmenu"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical">
+    <View
+        android:layout_width="40dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/dark_gray">
+    </View>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:visibility="visible"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_white_textview"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/dark_gray">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+                <TextView
+                    android:id="@+id/place_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_medium"
+                    android:textColor="@color/contact_name"
+                    android:textSize="16dp"
+                    android:gravity="bottom"
+                    android:layout_above="@+id/title"
+                    android:text="Scolland">
+                </TextView>
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="Glasgow"
+
+                    android:layout_above="@+id/Rating_upper"
+                    android:textColor="@color/contact_name">
+                </TextView>
+                <TextView
+                    android:id="@+id/Rating_upper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="4.4"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:textColor="@color/orange">
+                </TextView>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="280dp">
+
+                <ImageView
+                    android:id="@+id/cover_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/home_search_background"
+                    android:scaleType="fitXY">
+                </ImageView>
+
+            </RelativeLayout>
+
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                app:sliderStartAutoCycle="true" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/amenity_recycler"
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_below="@+id/imageview"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amenity_recycler"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:background="@drawable/rounded_corner_white_textview">
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="22dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="Overview"
+                    android:textColor="@color/contact_name">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_description_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_lite"
+                    android:text="Introduction"
+                    android:textColor="@color/contact_number">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/gray"></View>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="22dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="Gallery"
+                    android:textColor="@color/contact_name">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/gallery_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/gray"></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="22dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="Location &amp; Contact"
+                    android:textColor="@color/contact_name">
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/map_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/ic_baseline_map_24"></ImageView>
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sf_medium"
+                        android:text="Map"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/contact_name"
+                        android:textSize="15dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/phone_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/ic_baseline_local_phone_24"></ImageView>
+                    <TextView
+                        android:id="@+id/phoneno"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sf_medium"
+                        android:text="Phone no"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/contact_name"
+                        android:textSize="15dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/ic_baseline_language_24"></ImageView>
+                    <TextView
+                        android:id="@+id/website"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sf_medium"
+                        android:text="Website"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/contact_name"
+                        android:textSize="15dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/email_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/ic_baseline_email_24"></ImageView>
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sf_medium"
+                        android:text="Website"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/contact_name"
+                        android:textSize="15dp"></TextView>
+                </LinearLayout>
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/socailLinks_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/gray"></View>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="Openting Time"
+                    android:textColor="@color/contact_name">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/openingtime_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/gray"></View>
+
+                <androidx.cardview.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/contact_name"
+                    app:cardElevation="@dimen/space_6"
+                    app:cardUseCompatPadding="true"
+                    android:visibility="gone"
+                    card_view:cardCornerRadius="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/contact_name"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv__img"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="260dp"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/home_search_background" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.6"
+                                android:padding="@dimen/space_10"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1.5"
+                                        android:gravity="left"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:textColor="@color/dark_gray"
+                                            android:id="@+id/tv_name_city"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="18dp"
+                                            android:fontFamily="@font/sf_bold"
+                                            android:text="Order # 1907" />
+
+                                        <TextView
+                                            android:textColor="@color/white"
+                                            android:id="@+id/tv_description_city"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="14dp"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="@font/sf_regular"
+                                            android:text="Order # 1907" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:layout_marginTop="10dp">
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:weightSum="1"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="0.5"
+                                                    android:fontFamily="@font/sf_bold"
+                                                    android:text="Currency"
+                                                    android:textAlignment="viewStart"
+                                                    android:textColor="@color/dark_gray"
+                                                    android:textSize="14dp"></TextView>
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="end"
+                                                    android:gravity="end"
+                                                    android:layout_weight="0.5">
+                                                    <ImageView
+                                                        android:layout_width="14dp"
+                                                        android:layout_height="14dp"
+                                                        android:layout_marginRight="3dp"
+                                                        android:src="@drawable/icons8_money_24"></ImageView>
+                                                    <TextView
+                                                        android:id="@+id/tv_currency_city"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAlignment="viewEnd"
+                                                        android:textSize="13dp"
+                                                        android:layout_marginLeft="3dp"
+                                                        android:fontFamily="@font/sf_regular"
+                                                        android:text="Currency"
+                                                        android:textColor="@color/white">
+                                                    </TextView>
+                                                </LinearLayout>
+
+
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="horizontal">
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAlignment="viewStart"
+                                                    android:textSize="14dp"
+                                                    android:fontFamily="@font/sf_bold"
+                                                    android:text="Language"
+                                                    android:layout_weight="0.5"
+                                                    android:textColor="@color/dark_gray">
+                                                </TextView>
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="end"
+                                                    android:gravity="end"
+                                                    android:layout_weight="0.5">
+                                                    <ImageView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginRight="3dp"
+                                                        app:srcCompat="@drawable/ic_baseline_language_24"></ImageView>
+                                                    <TextView
+                                                        android:id="@+id/tv_lagnuage_city"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAlignment="viewEnd"
+                                                        android:textSize="13dp"
+                                                        android:paddingLeft="2dp"
+                                                        android:fontFamily="@font/sf_regular"
+                                                        android:text="BEST TIME TO VISIT"
+                                                        android:textColor="@color/white">
+                                                    </TextView>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:weightSum="1"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="horizontal">
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAlignment="viewStart"
+                                                    android:textSize="14dp"
+                                                    android:fontFamily="@font/sf_bold"
+                                                    android:text="Best time to visit"
+                                                    android:layout_weight="0.5"
+                                                    android:textColor="@color/dark_gray">
+                                                </TextView>
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="end"
+                                                    android:gravity="end"
+                                                    android:layout_weight="0.5">
+                                                    <ImageView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginRight="3dp"
+                                                        app:srcCompat="@drawable/ic_baseline_departure_board_24"></ImageView>
+
+                                                    <TextView
+                                                        android:id="@+id/tv_best_time_visit_city"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAlignment="viewEnd"
+                                                        android:textSize="13dp"
+                                                        android:paddingLeft="2dp"
+                                                        android:layout_marginLeft="3dp"
+                                                        android:fontFamily="@font/sf_regular"
+                                                        android:text="Currency"
+                                                        android:textColor="@color/white">
+                                                    </TextView>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:weightSum="1"
+                                                android:visibility="gone"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="horizontal">
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAlignment="viewStart"
+                                                    android:textSize="14dp"
+                                                    android:fontFamily="@font/sf_bold"
+                                                    android:text="Created at"
+                                                    android:layout_weight="0.5"
+                                                    android:textColor="@color/white">
+                                                </TextView>
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="end"
+                                                    android:gravity="end"
+                                                    android:layout_weight="0.5">
+                                                    <ImageView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginRight="3dp"
+                                                        app:srcCompat="@drawable/ic_baseline_access_time_24"></ImageView>
+
+                                                    <TextView
+                                                        android:id="@+id/tv_created_at"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAlignment="viewEnd"
+                                                        android:textSize="13dp"
+                                                        android:paddingLeft="2dp"
+                                                        android:layout_marginLeft="3dp"
+                                                        android:fontFamily="@font/sf_regular"
+                                                        android:text="Currency"
+                                                        android:textColor="@color/white">
+                                                    </TextView>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:weightSum="1"
+                                                android:layout_marginTop="5dp"
+                                                android:visibility="gone"
+                                                android:orientation="horizontal">
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAlignment="viewStart"
+                                                    android:textSize="14dp"
+                                                    android:fontFamily="@font/sf_bold"
+                                                    android:text="Updated at"
+                                                    android:layout_weight="0.5"
+                                                    android:textColor="@color/contact_name">
+                                                </TextView>
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="end"
+                                                    android:gravity="end"
+                                                    android:layout_weight="0.5">
+                                                    <ImageView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginRight="3dp"
+                                                        app:srcCompat="@drawable/ic_baseline_access_time_24"></ImageView>
+
+                                                    <TextView
+                                                        android:id="@+id/tv_updated_at"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAlignment="viewEnd"
+                                                        android:textSize="13dp"
+                                                        android:paddingLeft="2dp"
+                                                        android:layout_marginLeft="3dp"
+                                                        android:fontFamily="@font/sf_regular"
+                                                        android:text="Currency"
+                                                        android:textColor="@color/contact_name">
+                                                    </TextView>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="45dp"
+                                                android:paddingTop="3dp"
+                                                android:paddingBottom="3dp"
+                                                android:layout_marginTop="10dp"
+                                                android:id="@+id/start_navigation"
+                                                android:background="@drawable/round_button1"
+                                                android:text="Navigate Map"
+                                                android:paddingLeft="10dp"
+                                                android:paddingRight="10dp"
+                                                android:textAlignment="center"
+                                                android:gravity="center"
+                                                android:layout_weight="1"
+                                                android:layout_marginBottom="10dp"
+                                                android:layout_marginRight="5dp"
+                                                android:textColor="@color/black"
+                                                android:fontFamily="@font/sf_regular"
+                                                android:textSize="13sp" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="22dp"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="Categories"
+                    android:visibility="gone"
+                    android:textColor="@color/contact_name">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/category_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="22dp"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="Places Type"
+                    android:visibility="gone"
+                    android:textColor="@color/contact_name">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/placesType_recycler"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/rating_review_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="viewStart"
+                            android:textSize="22dp"
+                            android:id="@+id/rating_and_reviews_heading"
+                            android:fontFamily="@font/sf_medium"
+                            android:text="Rating and reviews"
+                            android:textColor="@color/contact_name">
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="viewStart"
+                            android:textSize="20dp"
+                            android:id="@+id/rating_count"
+                            android:fontFamily="@font/sf_bold"
+                            android:paddingLeft="10dp"
+                            android:text="Rating and reviews"
+                            android:textColor="@color/orange">
+                        </TextView>
+                    </LinearLayout>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar_upper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:progressTint="@color/orange"
+                        android:progressBackgroundTint="@color/dark_gray"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:rating="3"
+                        android:visibility="gone"
+                        android:isIndicator="true" />
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/Rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:textSize="30dp"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:fontFamily="@font/sf_bold"
+                        android:text="4.4"
+                        android:textColor="@color/contact_name">
+                    </TextView>
+                    <RatingBar
+                        android:visibility="gone"
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:progressTint="@color/orange"
+                        android:progressBackgroundTint="@color/dark_gray"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:layout_alignParentRight="true"
+                        android:rating="3"
+                        android:isIndicator="true" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reviews_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/gray"></View>
+
+                <LinearLayout
+                    android:id="@+id/similarplaces_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:textSize="22dp"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:fontFamily="@font/sf_medium"
+                        android:text="Similar Places"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/contact_name">
+                    </TextView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/similarplaces_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"></View>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

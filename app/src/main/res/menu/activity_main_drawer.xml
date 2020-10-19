@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <group android:id="@+id/nav_open_account_group"
+            android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_cities"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_location_city_24"
+            app:showAsAction="ifRoom"
+            android:title="Cities" />
+        </group>
+        <group android:id="@+id/nav_open_delivered_group"
+            android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inspiration"
+            android:enabled="true"
+           android:icon="@drawable/business"
+            app:showAsAction="ifRoom"
+            android:title="Inspirations" />
+        </group>
+        <group android:id="@+id/nav_open_pending_group"
+            android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_popular_places"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_stars_24"
+            app:showAsAction="ifRoom"
+            android:visible="true"
+            android:title="Popular Cities" />
+        </group>
+
+        <group android:id="@+id/nav_open_accepted_group"
+            android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_places"
+            android:enabled="true"
+            android:icon="@drawable/place"
+            app:showAsAction="ifRoom"
+            android:title="Places" />
+        </group>
+
+        <group android:id="@+id/nav_open_logout_group"
+            android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:enabled="true"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:title="Logout" />
+        </group>
+
+</menu>

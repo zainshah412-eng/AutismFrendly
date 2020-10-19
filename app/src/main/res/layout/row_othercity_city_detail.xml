@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_search_background"
+        app:cardElevation="@dimen/space_6"
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv__img"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/home_search_background" />
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingRight="@dimen/space_10"
+        android:paddingBottom="@dimen/space_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/sf_medium"
+                android:text="Order # 1907" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="@color/contact_number"
+                android:id="@+id/tv_description"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_regular"
+                android:text="Street 123 XLOJ " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="Currency: " />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/contact_name"
+                    android:id="@+id/tv_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sf_lite"
+                    android:text="Street 123 XLOJ " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="Language: " />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="@color/contact_name"
+                android:id="@+id/tv_lagnuage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_lite"
+                android:text="Street 123 XLOJ " />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    </LinearLayout>

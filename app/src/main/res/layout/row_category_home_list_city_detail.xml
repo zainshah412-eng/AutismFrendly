@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:textSize="22dp"
+        android:layout_marginTop="@dimen/space_10"
+        android:fontFamily="@font/sf_medium"
+        android:text="Other Cities"
+        android:textColor="@color/contact_name">
+    </TextView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categorylist_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/no_places_layout_places"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_pending_order"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_pending_orders_large">
+
+        </ImageView>
+
+        <com.AutismFriendlyWorld.tcc.util.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_pending_order"
+            android:text="No Places Available "
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            ></com.AutismFriendlyWorld.tcc.util.CustomBoldTextView>
+    </RelativeLayout>
+</LinearLayout>

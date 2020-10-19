@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_search_background"
+        app:cardElevation="@dimen/space_6"
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingLeft="@dimen/space_10"
+                android:paddingRight="@dimen/space_10"
+                android:paddingBottom="@dimen/space_10"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv__img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/man"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="Order # 1907" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RatingBar
+                        android:id="@+id/rating_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:progressTint="@color/orange"
+                        android:progressBackgroundTint="@color/dark_gray"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:layout_alignParentRight="true"
+                        android:rating="3"
+                        android:isIndicator="true" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/contact_number"
+                        android:id="@+id/tv_time"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/sf_regular"
+                        android:text="Street 123 XLOJ " />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/contact_number"
+                    android:id="@+id/tv_comment"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="Street 123 XLOJ " />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</LinearLayout>

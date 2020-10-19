@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_search_background"
+    app:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+        <ImageView
+            android:id="@+id/iv__img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/home_search_background" />
+
+        <LinearLayout
+            android:id="@+id/rating_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:id="@+id/tv_placename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_medium"
+                android:layout_above="@+id/tv_description"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Japan" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_regular"
+                android:layout_above="@id/rating_cover"
+                android:paddingLeft="10dp"
+                android:text="Japan" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_lite"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Japan" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

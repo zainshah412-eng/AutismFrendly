@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_search_background"
+    app:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+        <ImageView
+            android:id="@+id/iv__img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/home_search_background" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sf_medium"
+            android:text="Japan" />
+
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_cityname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_bold"
+            android:layout_above="@+id/tv_description"
+            android:paddingLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Japan" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_regular"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Japan" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

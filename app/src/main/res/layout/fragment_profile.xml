@@ -1,0 +1,138 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.AutismFriendlyWorld.tcc.Fragment.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_pro_img"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/space_10"
+        android:src="@drawable/ic_add_img"
+        android:layout_marginTop="30dp"/>
+
+
+    <TextView
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@drawable/xml_textbox_bg"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/space_10"
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        android:hint="Username"
+        android:fontFamily="@font/sf_regular"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@drawable/xml_textbox_bg"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="@dimen/space_10"
+
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        android:hint="Phone number"
+        android:fontFamily="@font/sf_regular"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@drawable/xml_textbox_bg"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/space_10"
+
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        android:hint="Your Email"
+
+        android:fontFamily="@font/sf_regular"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@drawable/xml_textbox_bg"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="@dimen/space_10"
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        android:hint="Your Password"
+        android:drawableEnd="@drawable/ic_baseline_edit_24"
+        android:fontFamily="@font/sf_regular"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/btn_Sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_rounded_button"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/btn_update"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/sf_regular"
+                    android:textSize="@dimen/text_size_normal" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

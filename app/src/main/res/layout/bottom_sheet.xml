@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_search_background"
+    app:cardElevation="@dimen/space_6"
+    app:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="5dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:background="@drawable/rounded_corner_white_textview">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="Glasgow"
+                    android:textColor="@color/contact_name">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="Address"
+                    android:textColor="@color/contact_name">
+                </TextView>
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="Introduction"
+                    android:textColor="@color/contact_number">
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="Description"
+                    android:textColor="@color/contact_name">
+                </TextView>
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="Introduction"
+                    android:textColor="@color/contact_number">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textSize="22dp"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="Cities"
+                    android:textColor="@color/contact_name">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cities_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"></View>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</androidx.cardview.widget.CardView>

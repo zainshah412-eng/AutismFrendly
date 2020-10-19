@@ -1,0 +1,23 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:3:1-9:12
+INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:3:1-9:12
+INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:3:1-9:12
+INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:3:1-9:12
+INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:3:1-9:12
+INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:3:1-9:12
+INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:3:1-9:12
+	package
+		ADDED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:4:5-37
+		INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml
+		INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:6:5-32
+		INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml
+		INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:3:11-69
+	android:versionCode
+		ADDED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml:5:5-29
+		INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml
+		INJECTED from E:\App\Car_Manager_working\libs\ViewPagerIndicator-Library\AndroidManifest.xml
